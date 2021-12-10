@@ -1,13 +1,11 @@
-import adapter from '@sveltejs/adapter-auto'; //adapter: adapter()
+import adapter from '@sveltejs/adapter-auto';
+	//adapter: adapter()
 
 //import adapter from '@sveltejs/adapter-node';	//for ssr using nodejs
 	//adapter: adapter({ out: 'build', precompress: false, env: { host: '0.0.0.0', port: '2000'} })
 
 //import adapter from '@sveltejs/adapter-static';	// for pre-rendering, add fallback page if SPA
 	//adapter: adapter({pages: 'build',	assets: 'build', fallback: null})
-
-//for attractions
-const sveltePreprocess = require('svelte-preprocess');
 
 const config = {
 	compilerOptions: null,	// options passed to svelte.compile (https://svelte.dev/docs#svelte_compile)
@@ -17,7 +15,7 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		amp: false,
-		appDir: '_app',
+		//appDir: '_app',
 		files: {
 			assets: 'static',
 			hooks: 'src/hooks',
@@ -50,7 +48,7 @@ const config = {
 		vite: () => ({})
 	},
 	
-	preprocess: [sveltePreprocess()],
+	preprocess: null
 };
 
 export default config;
