@@ -2,7 +2,7 @@
   "name": "sveltekit",
   "version": "0.0.1",
   "scripts": {
-    "dev": "svelte-kit dev --host --port 7000",
+    "dev": "svelte-kit dev --port 3000",
     "build": "svelte-kit build",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
@@ -26,9 +26,11 @@
   "dependencies": {
     "@macfja/svelte-persistent-store": "^1.2.0",
     "axios": "^0.24.0",
+    "axios-retry": "^3.2.4",
     "jwt-decode": "^3.1.2",
     "lodash": "^4.17.21",
     "materialize-css": "^1.0.0",
+    "s-offline": "^0.3.0",
     "svelte-forms-lib": "^2.0.0",
     "svelte-material-ui": "^6.0.0-beta.5",
     "svelte-spa-router": "^3.2.0",

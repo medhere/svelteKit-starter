@@ -4,11 +4,10 @@
 import Router,{link, push, pop, replace, location, querystring } from 'svelte-spa-router';
 import {wrap} from 'svelte-spa-router/wrap';
 
-import Home from "./Links/Home.svelte";
-import Admin from "./Links/Admin.svelte";
-// import User from "./Links/User.svelte";
-import Params from "./Links/Params.svelte";
-import NotFound from "./Links/NotFound.svelte";
+import Home from "./hash_routes/Home.svelte";
+import Admin from "./hash_routes/Admin.svelte";
+import Params from "./hash_routes/Params.svelte";
+import NotFound from "./hash_routes/NotFound.svelte";
 
 var user=false
 
@@ -19,7 +18,7 @@ var routes = {
     '/admin/*': Admin,
     '/params/:first/:last?': Params,
     '/user':wrap({
-        asyncComponent: () => import('./Links/User.svelte'),
+        asyncComponent: () => import('./hash_routes/User.svelte'),
         // loadingComponent: Loading,
         // component: User,
         props: {foo: 'bar'},
